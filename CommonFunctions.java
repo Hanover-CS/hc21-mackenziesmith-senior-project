@@ -11,4 +11,11 @@ public class CommonFunctions {
         driver.get("localhost:8120");
         return driver;
     }
+
+    public static void login(ChromeDriver driver, String username, String password) {
+        PageLogin objLogin = new PageLogin(driver);
+        objLogin.enterUsername(username);
+        objLogin.enterPassword(password);
+        objLogin.clickLoginBtn();
+    }
 }
