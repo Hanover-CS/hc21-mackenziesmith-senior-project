@@ -24,6 +24,18 @@ public class PageUserHome {
         return driver.findElement(By.cssSelector("body > nav > ul.navbar-nav.mt-2 > li > a"));
     }
 
+    private WebElement getDeclineToStandButton(){
+        return driver.findElement(By.xpath("//button[contains(text(),'Decline to stand')]"));
+    }
+
+    private WebElement getWillingToStandButton(){
+        return driver.findElement(By.xpath("//button[contains(text(),'Willing to stand')]"));
+    }
+
+    private WebElement getViewBallotButton(){
+        return driver.findElement(By.xpath("//button[contains(text(),'View Ballot')]"));
+    }
+
     public void clickHomeTab(){
         getHomeTab().click();
     }
@@ -31,4 +43,10 @@ public class PageUserHome {
     public void clickLogoutLink(){
         getLogoutLink().click();
     }
+
+    public void clickDeclineToStandButton(){ getDeclineToStandButton().click(); }
+
+    public void clickWillingToStandButton(){ getWillingToStandButton().click(); }
+
+    public void clickViewBallotButton(){ getViewBallotButton().click(); }
 }
